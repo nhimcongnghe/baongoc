@@ -113,29 +113,6 @@
         opacity: 0;
       }
     }
-
-    /* Dòng chữ chạy */
-    .marquee {
-      width: 100%;
-      overflow: hidden;
-      position: fixed;
-      bottom: 0;
-      background: #fff5f9;
-      color: #d63384;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .marquee span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marquee 15s linear infinite;
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
   </style>
 </head>
 <body>
@@ -154,8 +131,6 @@
     <source src="https://raw.githubusercontent.com/nhimcongnghe/musicdata/main/Ph%C3%A9p%20M%C3%A0u%20_%C4%90%C3%A0n%20C%C3%A1%20G%E1%BB%97%20OST_%20_%20Mounter%20x%20MAYDAYs_%20Minh%20T%E1%BB%91c%20_%20Official%20MV_Audio_128k.mp3" type="audio/mpeg">
     Trình duyệt không hỗ trợ phát nhạc.
   </audio>
-
-  <div class="marquee"><span>🌟 Trang web nhỏ đầy phép màu dành cho cô gái bánh kem dễ thương nhất thế giới 🌟</span></div>
 
   <script>
     const btn = document.getElementById('toggleMusicBtn');
