@@ -57,7 +57,7 @@
     <p>💬 "Mỗi chiếc bánh là một câu chuyện ngọt ngào!"</p>
   </div>
   <footer>🌟 Cảm ơn vì đã ghé thăm thế giới nhỏ của Ngọc 💗</footer>
-  <!-- Nút nhạc dễ thương -->
+<!-- Nút bật/tắt nhạc và nhạc ẩn -->
 <button id="toggleMusicBtn" style="
   margin-top: 20px;
   padding: 12px 24px;
@@ -73,7 +73,6 @@
   🎵 Bật nhạc nhẹ nhàng
 </button>
 
-<!-- Nhúng nhạc SoundCloud ẩn -->
 <iframe 
   id="musicFrame"
   width="0" height="0"
@@ -84,19 +83,18 @@
 <script>
   const btn = document.getElementById('toggleMusicBtn');
   const iframe = document.getElementById('musicFrame');
-
   let isPlaying = false;
 
   btn.addEventListener('click', () => {
     if (!isPlaying) {
-      // Phát nhạc
-      iframe.src = "https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/BdiXn0r4BD0iQPyz7n&auto_play=true&loop=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false";
+      // Bật nhạc
+      iframe.src = "https://w.soundcloud.com/player/?url=https%3A//m.soundcloud.com/1708-ph-m-h-u-vi-t/phep-mau-dan-ca-go-ost-maydays-ft-minh-toc&auto_play=true&loop=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false";
       btn.innerText = "💗 Đang phát nhạc...";
       btn.style.backgroundColor = "#c34d94";
       isPlaying = true;
     } else {
-      // Dừng nhạc
-      iframe.src = ""; // reset lại
+      // Tắt nhạc
+      iframe.src = "";
       btn.innerText = "🎵 Bật nhạc nhẹ nhàng";
       btn.style.backgroundColor = "#ff8ab8";
       isPlaying = false;
