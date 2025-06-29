@@ -57,14 +57,51 @@
     <p>💬 "Mỗi chiếc bánh là một câu chuyện ngọt ngào!"</p>
   </div>
   <footer>🌟 Cảm ơn vì đã ghé thăm thế giới nhỏ của Ngọc 💗</footer>
-  
-<!-- Nhạc SoundCloud tự phát 1 lần, ẩn -->
+  <!-- Nút nhạc dễ thương -->
+<button id="toggleMusicBtn" style="
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #ff8ab8;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255,138,184,0.4);
+  transition: all 0.3s ease;
+">
+  🎵 Bật nhạc nhẹ nhàng
+</button>
+
+<!-- Nhúng nhạc SoundCloud ẩn -->
 <iframe 
-  width="0" height="0" 
-  scrolling="no" frameborder="no" allow="autoplay" 
-  src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/BdiXn0r4BD0iQPyz7n&auto_play=true&loop=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+  id="musicFrame"
+  width="0" height="0"
+  style="display:none;"
+  scrolling="no" frameborder="no" allow="autoplay">
 </iframe>
 
-</body>
+<script>
+  const btn = document.getElementById('toggleMusicBtn');
+  const iframe = document.getElementById('musicFrame');
+
+  let isPlaying = false;
+
+  btn.addEventListener('click', () => {
+    if (!isPlaying) {
+      // Phát nhạc
+      iframe.src = "https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/BdiXn0r4BD0iQPyz7n&auto_play=true&loop=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false";
+      btn.innerText = "💗 Đang phát nhạc...";
+      btn.style.backgroundColor = "#c34d94";
+      isPlaying = true;
+    } else {
+      // Dừng nhạc
+      iframe.src = ""; // reset lại
+      btn.innerText = "🎵 Bật nhạc nhẹ nhàng";
+      btn.style.backgroundColor = "#ff8ab8";
+      isPlaying = false;
+    }
+  });
+</script>
 </body>
 </html>
