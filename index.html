@@ -70,12 +70,12 @@
   box-shadow: 0 5px 15px rgba(255,138,184,0.4);
   transition: all 0.3s ease;
 ">
-  🎵 Nhạc của Bảo Ngọc
+  🎵 Bật nhạc nhẹ nhàng
 </button>
 
-<!-- Audio ẩn -->
+<!-- Audio ẩn với link MP3 trực tiếp từ Google Drive -->
 <audio id="bgMusic" preload="auto">
-  <source src="https://voca.ro/1hoF9MQUIHuz/audio.mp3" type="audio/mpeg">
+  <source src="https://drive.google.com/uc?export=download&id=14sTChzA-FcVv5JA3_IkSbmlXVnpPpp7-" type="audio/mpeg">
   Trình duyệt của bạn không hỗ trợ phát nhạc.
 </audio>
 
@@ -87,13 +87,13 @@
   btn.addEventListener('click', () => {
     if (!isPlaying) {
       music.play();
-      btn.innerText = "💗 Mời bạn chill nha...";
+      btn.innerText = "💗 Đang phát nhạc...";
       btn.style.backgroundColor = "#c34d94";
       isPlaying = true;
     } else {
       music.pause();
       music.currentTime = 0;
-      btn.innerText = "🎵 Nhạc của Bảo Ngọc";
+      btn.innerText = "🎵 Bật nhạc nhẹ nhàng";
       btn.style.backgroundColor = "#ff8ab8";
       isPlaying = false;
     }
